@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Reservations</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    
+    <!-- Header region with buttons -->
+    <div class="button-container">
+      <!-- Facility name will be inserted with popup.js -->
+       <div class="buttons">
+        <a href="./input_form.html"><button class="edit-btn">Edit Info</button></a>
+        <button class="request-btn">Autofill / Confirm</button>
+        <button class="refresh-btn">Refresh Page</button>
+       </div>
+      <span>*Right click to remove selection</span>
+    </div>
+
+    <!-- Reservation table -->
+    <div id="timeline-container">
+      <div id="hour-labels"></div>
+      <div id="timeline"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

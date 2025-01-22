@@ -1,0 +1,25 @@
+{
+    "name": "Reservation Viewer",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Fetches and displays reservation information in a vertical time table",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting", 
+      "activeTab"
+    ],
+    "host_permissions": ["https://www.chem.s.u-tokyo.ac.jp/*"],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.chem.s.u-tokyo.ac.jp/*"
+          
+        ],
+        "js": ["content-script.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }

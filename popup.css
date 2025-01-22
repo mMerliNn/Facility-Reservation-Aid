@@ -1,0 +1,197 @@
+/* popup.css */
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0px 10px;
+  background-color: #fff;
+  width: 300px; /* Adjust as needed */
+  /* overflow: auto; */
+  cursor: crosshair;
+}
+  
+h1 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Timeline container: we stack hour labels next to the timeline. */
+#timeline-container {
+  display: flex; 
+  position: relative;
+  width: 100%;
+}
+
+/* Hour labels on the left side */
+#hour-labels {
+  width: 40px; 
+  /* border-right: 1px solid #ccc; */
+  margin-right: 5px;
+  position: relative;
+}
+
+/* The main timeline area */
+#timeline {
+  position: relative;
+  flex: 1;
+  height: 960px; /* 24 hours * 20px */
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  size: 2px;
+}
+
+.hour-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ddd;
+  pointer-events: none;
+  }
+
+  .hour-label {
+  position: absolute;
+  left: 5px;
+  font-size: 0.75rem;
+  color: #666;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* JS generated blocks */
+.reservation-block {
+  box-sizing: border-box;
+  position: absolute;  
+  left: 10px;
+  right: 10px;
+  z-index: 1;
+  background-color: #1976d2;
+  color: #fff;
+  border-radius: 2px;
+  /* padding: 2px 4px; */
+  padding: 0px 4px;
+  box-sizing: border-box;
+  font-size: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: none;
+  font-size: 9px;
+  font-weight: 520;
+}
+
+/* Optional: add a hover effect to see more details. */
+.reservation-block:hover {
+  background-color: #135ba0;
+  pointer-events: auto;
+  }
+
+  .current-time-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.8px; 
+  background-color: #FF7F50;
+  z-index: 2; 
+  pointer-events: none;
+}
+  
+/* The label that says "Current time" */
+.current-time-label {
+  position: absolute;
+  font-size: 10px;
+  color: #FF7F50; 
+  transform: translateY(-100%); 
+  left: 4px; 
+  z-index: 1;
+  pointer-events: none;
+}
+
+.edit-btn {
+  margin-bottom: 10px;
+  padding: 4px;
+  z-index: 9000;
+}
+
+.autofill-btn {
+  margin-bottom: 10px;
+  padding: 4px;
+  z-index: 9000;
+}
+
+
+button {
+  margin-bottom: 10px;
+  padding: 4px;
+  z-index: 9000;
+}
+
+#timeline-container {
+  background: linear-gradient(0deg, #f0f0f0 4%, transparent 4%);
+  background-size: 100% calc(960px / 24);
+  height: 960px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* User selected reservation time */
+.selection-rectangle {
+  position: absolute;
+  background-color: rgba(0, 123, 255, 0.3);
+  /* background-color: #135ba0; */
+  border: 1px solid #007bff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  pointer-events: none; /* Disable pointer events during drag */
+  left: 10px;
+  right: 10px;
+  z-index: 1;
+  padding: 2px 4px;
+  color: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+  }
+  
+.time-info {
+  position: absolute;
+  color: black;
+  background-color: white;
+  padding: 2px 5px;
+  font-size: 12px;
+  z-index: 1000; 
+}
+  
+.button-container {
+  position: sticky; 
+  top: 0; 
+  background-color: white;
+  z-index: 1000; 
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 10px; */
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+span {
+  color: #666;
+}
+
+.selection-rectangle.overlap-warning {
+  outline: 1px solid #FF0000;
+  border: none;
+  background-color: rgba(255, 0, 0, 0.3);
+}

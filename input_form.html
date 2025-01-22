@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Input Form</title>
+  <link rel="stylesheet" href="info_form.css">
+</head>
+<body>
+  <div id="custom-input-box">
+    <a href="./popup.html">✖ Back to Reservation Table ✖</button></a>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="My Name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="name@g.ecc.u-tokyo.ac.jp">
+    
+    <label for="phone">Tel:</label>
+    <input type="text" id="phone" placeholder="Suga lab Tel.: 24638">
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Password">
+    
+    <label for="rsv_labuid">Lab: </label>
+    <select id="rsv_labuid">
+      <option value="0">-- No Select --</option>
+      <option value="10">Goda</option>
+      <option value="11">Ohkoshi</option>
+      <option value="12">Yamanouchi</option>
+      <option value="13">Tsukuda</option>
+      <option value="14">Suga</option>
+      <option value="15">Kobayashi</option>
+      <option value="16">Oguri</option>
+      <option value="17">Isobe</option>
+      <option value="18">Hitosugi</option>
+      <option value="19">Ozawa</option>
+      <option value="20">Yamada</option>
+      <option value="21">Bioinorganic</option>
+      <option value="22">Nakamura</option>
+      <option value="23">Kagi</option>
+      <option value="24">Okabayashi</option>
+      <option value="25">Campbell</option>
+      <option value="26">Student_Lab</option>
+      <option value="52">U-Tokyo</option>
+      <option value="53">Other</option>
+    </select>
+    
+    <button class="clear-btn">Clear</button>
+    <button class="save-btn">Save</button>
+  </div>
+  <script src="input_form.js"></script>
+</body>
+</html>

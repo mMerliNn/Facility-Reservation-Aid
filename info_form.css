@@ -1,0 +1,43 @@
+body {
+  width: 300px;
+}
+
+#custom-input-box {
+  position: relative; 
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #f1f1f1;
+    /* border: 1px solid #cccccc; */
+    z-index: 10000;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    border-radius: 8px;
+  }
+  
+  #custom-input-box input {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  #custom-input-box button {
+    display: block;
+    margin-top: 10px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #fff;
+    width: 300px; 
+  }
+
+a, a:hover, a:active, a:visited, a:focus {
+  text-decoration:none;
+  text-align: center;
+  display: block;
+  outline: 2px solid rebeccapurple;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+/* Originally background.css */

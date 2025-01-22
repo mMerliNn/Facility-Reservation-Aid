@@ -89,21 +89,25 @@ function showFacilityName() {
 
 // Generate time table hour lines and labels
 function drawHourLines() {
-  const timeline = document.getElementById("timeline");
+  const fragment = document.createDocumentFragment();
+  const labelFragment = document.createDocumentFragment();
+
   for (let hour = 0; hour <= 24; hour++) {
     const topPos = hour * PX_PER_HOUR;
 
     const line = document.createElement("div");
     line.className = "hour-line";
     line.style.top = `${topPos}px`;
-    timeline.appendChild(line);
+    fragment.appendChild(line);
 
     const label = document.createElement("div");
     label.className = "hour-label";
     label.style.top = `${topPos}px`;
     label.textContent = `${hour}:00`;
-    document.getElementById("hour-labels").appendChild(label);
+    labelFragment.appendChild(label);
   }
+  timeline.appendChild(fragment);
+  document.getElementById("hour-labels").appendChild(labelFragment);
 }
 
 function loadReservations() {

@@ -6,7 +6,7 @@
   if (noDataElement) {
     chrome.storage.local.set({ reservations: [] });
   } else {
-
+    console.info("No reservations found.");
   }
 
   const facilityName = document.querySelector(".facname")?.textContent.trim() || "Unknown Facility";

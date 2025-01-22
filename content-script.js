@@ -1,7 +1,7 @@
 (function scrapeReservations() {
 
   const rsvBodyList = document.querySelector(".rsv_body_list");
-  const noDataElement = rsvBodyList.querySelector("p.nodata");
+  const noDataElement = rsvBodyList?.querySelector("p.nodata");
 
   if (noDataElement) {
     chrome.storage.local.set({ reservations: [] });
